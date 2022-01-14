@@ -1,0 +1,13 @@
+[package]
+name = "povorot-tgalertbot"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+teloxide = { version = "0.5", features = ["macros", "auto-send"] }
+log = "0.4"
+pretty_env_logger = "0.4.0"
+tokio = { version =  "1.15", features = ["full"] }
+redis = { version = "0.21.4", features = ["tokio-comp"]}
