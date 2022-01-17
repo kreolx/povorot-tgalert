@@ -11,7 +11,7 @@ FROM debian:buster-slim
 ARG APP=/var/tgalertbot
 
 RUN apt-get update \
-    && apt-get install -y libssl-dev pkg-config build-essential
+    && apt-get install -y libssl-dev pkg-config build-essential ca-certificates
 
 ENV TZ=Etc/UTC \
     APP_USER=appuser
