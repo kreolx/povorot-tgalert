@@ -20,7 +20,7 @@ RUN groupadd $APP_USER \
     && useradd -g $APP_USER $APP_USER \
     && mkdir -p ${APP}
 
-COPY --from=builder /webapi/target/release/povorot-tgalertbot ${APP}
+COPY --from=builder /tgalertbot/target/release/povorot-tgalertbot ${APP}
 
 RUN chown -R $APP_USER:$APP_USER ${APP}
 USER $APP_USER
