@@ -1,0 +1,17 @@
+version: '3.7'
+
+networks:
+  resources:
+    external: true
+
+services:
+  tgalert-bot:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - REDIS_CON_STRING=redis://redis
+      - RABBIT_CON_STRING=amqp://guest:guest@rabbitmq
+    networks:
+      - resources
+    restart: always
